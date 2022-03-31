@@ -2,7 +2,7 @@
 import './App.css';
 import { useState} from 'react'
 import { BrowserRouter as  Router } from 'react-router-dom';
-import ChatRoom from './container/ChatRoom/ChatRoom';
+import ChatRoom from './component/ChatRoom/ChatRoom';
 import { io }  from 'socket.io-client'
 
 const socket = io.connect('http://localhost:4000')
@@ -21,11 +21,7 @@ const App = () => {
 }
   return (
          <div>
-             { showChat ?
-             <div>
-               <h1>Common boys Lets start Chatting</h1>
-             </div>
-             :
+            
              <div>
               <h1>House Of Cruise Chat App</h1>
               <h3>Enter your username to join</h3>
@@ -38,7 +34,9 @@ const App = () => {
                   setuserRoom(event.target.value)
               }}></input>
               <button onClick={joinRoom}>Join Chat</button>
-              </div>} 
+              </div>
+
+              <ChatRoom  socket={socket} username={userName} roomId={userRoom}/>
          </div>
  
   )

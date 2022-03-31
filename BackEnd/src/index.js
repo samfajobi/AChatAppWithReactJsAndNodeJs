@@ -12,7 +12,7 @@ const server = http.createServer(app)
 //const io = socketio(server)  OR
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost:3001',
         methods: ['GET', 'POST']
     }
 })
@@ -27,6 +27,11 @@ io.on('connection', (socket) => {
     socket.on('joinRoom', (dataId) => {
         socket.join(dataId)
         console.log(`User with Id ${socket.id} joined room ${dataId}`)
+    })
+
+    socket.on('sendMessage', (msgData) => {
+        socket.to(msgData.ChatRoom).emit( 'sendToClient', msgData)
+        console.log(msgData)
     })
 
     socket.broadcast.emit('message,', 'A new has User has Joined the chat room')
