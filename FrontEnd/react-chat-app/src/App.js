@@ -1,7 +1,7 @@
 
 import './App.css';
 import { useState} from 'react'
-import { BrowserRouter as  Router } from 'react-router-dom';
+//import { BrowserRouter as  Router } from 'react-router-dom';
 import ChatRoom from './component/ChatRoom/ChatRoom';
 import { io }  from 'socket.io-client'
 
