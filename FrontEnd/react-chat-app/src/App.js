@@ -16,13 +16,13 @@ const App = () => {
   const joinRoom = () => {
     if ( userName !== '' & userRoom !== '') {
       socket.emit('joinRoom', userRoom)
-
+      setShowChat(true)
   }
 }
   return (
          <div>
-            
-             <div>
+            {!showChat ?
+            <div>
               <h1>House Of Cruise Chat App</h1>
               <h3>Enter your username to join</h3>
               <input type='text' placeholder='Username'
@@ -34,9 +34,9 @@ const App = () => {
                   setuserRoom(event.target.value)
               }}></input>
               <button onClick={joinRoom}>Join Chat</button>
-              </div>
+            </div> :
 
-              <ChatRoom  socket={socket} username={userName} roomId={userRoom}/>
+              <ChatRoom  socket={socket} username={userName} roomId={userRoom}/> }
          </div>
  
   )
