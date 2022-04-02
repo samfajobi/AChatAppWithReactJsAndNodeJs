@@ -28,11 +28,11 @@ const App = () => {
               <input type='text' placeholder='Username'
               onChange={(event) => {
                   setUserName(event.target.value)
-              }}></input>
+              }} required ></input>
               <input type='text' placeholder='Room'
               onChange={(event) => {
                   setuserRoom(event.target.value)
-              }}></input>
+              }} required ></input>
               <button onClick={joinRoom}>Join Chat</button>
             </div> :
 
