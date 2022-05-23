@@ -62,7 +62,7 @@ const LoginIn = () => {
   const [ username, setUserName ] = useState("");
   const [ password, setPassword ] = useState("")
 
-  const submitForm = () => {
+  const submitForm = (e) => {
     e.preventDefault()
 
     login(dispatch, {username, password})

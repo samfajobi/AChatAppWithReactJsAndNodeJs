@@ -19,7 +19,7 @@ const authSlice = createSlice({
 
         },
         loginFailed: (state, action) => {
-            state.isFetching = false,
+            state.isFetching = false
             state.error = true
 
         }
