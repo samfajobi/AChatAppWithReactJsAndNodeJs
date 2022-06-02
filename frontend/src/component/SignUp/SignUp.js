@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 //import axios from "axios"
-import { axiosInstance } from "../../prodConfig";
+//import { axiosInstance } from "../../prodConfig";
+import { axiosInstance } from "../../devConfig";
 
 
 
@@ -113,7 +114,7 @@ const SignIn = () => {
            <BtnSection>
              <Button1 onClick={submitForm} >SignUp</Button1>
              <Text>Already a member? <A href='/login'> Login</A></Text>
-             <A href="/demologin" ><Button2  >Demo Login</Button2></A>
+             <A href="/chat" ><Button2  >Demo Login</Button2></A>
            </BtnSection>
        </Wrapper>
 

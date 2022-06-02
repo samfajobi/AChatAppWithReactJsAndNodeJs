@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+//import { useDispatch } from "react-redux"
 import { demoLogin } from "../../container/redux/apiCalls"
 import { Navigate } from "react-router-dom";
 
@@ -58,7 +58,7 @@ const Button1 = styled.button`
 
 const DemoLogin = () => {
 
-  const dispatch = useDispatch()
+  //const dispatch = useDispatch()
 
   const [ username, setUserName ] = useState("");
   const [ password, setPassword ] = useState("")
@@ -66,7 +66,7 @@ const DemoLogin = () => {
   const submitForm = (e) => {
     e.preventDefault()
 
-    demoLogin(dispatch, {username, password});
+    // demoLogin(dispatch, {username, password});
     return <Navigate to="/chat" />;
     
   }

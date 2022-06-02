@@ -1,5 +1,7 @@
 import { loginStart, loginSuccess, loginFailed } from "./userReduxSlice";
-import { axiosInstance } from "../../prodConfig";
+//import { axiosInstance } from "../../prodConfig";
+import { axiosInstance } from "../../devConfig";
+
 import axios from "axios";
 
 
@@ -19,6 +21,7 @@ export const login = async (dispatch, user) => {
     }
 
 }
+
 
 export const demoLogin = async (dispatch, user) => {
     dispatch(loginStart())

@@ -31,9 +31,6 @@ const HomeInfo = styled.div`
   display: flex;
   flex-direction: column;
   
- 
- 
-  
 `
 
 const HomeInfoText = styled.div`

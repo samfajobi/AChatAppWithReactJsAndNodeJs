@@ -123,7 +123,8 @@ const App = () => {
   return (
          <div>
             {!showChat ?
-            <Container>
+            <ChatRoom  socket={socket} username={userName} roomId={userRoom}/>  :
+            <Container> 
               <Wrapper>
                 <TitleWrapper>
                   <Icon><ChatOutlinedIcon/></Icon>
@@ -146,10 +147,9 @@ const App = () => {
               
               <Button onClick={joinRoom}>Join Chat</Button>
               
-              </Wrapper>
-            </Container> :
-
-              <ChatRoom  socket={socket} username={userName} roomId={userRoom}/> }
+                </Wrapper> 
+              </Container>  }
+           
          </div>
  
   )
