@@ -12,7 +12,7 @@ router.post("/signin", async ( req, res ) => {
             firstname: req.body.firstname,
             password: req.body.password,
             confirmPass: req.body.confirmPass,
-            fullname: req.body.fullname,
+            lastname: req.body.lastname,
             username: req.body.username,
             email: req.body.email
         })
