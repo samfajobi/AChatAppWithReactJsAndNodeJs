@@ -1,6 +1,6 @@
 import { loginStart, loginSuccess, loginFailed } from "./userReduxSlice";
-//import { axiosInstance } from "../../prodConfig";
-import { axiosInstance } from "../../devConfig";
+import { axiosInstance } from "../../prodConfig";
+//import { axiosInstance } from "../../devConfig";
 
 import axios from "axios";
 

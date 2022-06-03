@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 //import axios from "axios"
-//import { axiosInstance } from "../../prodConfig";
-import { axiosInstance } from "../../devConfig";
+import { axiosInstance } from "../../prodConfig";
+//import { axiosInstance } from "../../devConfig";
 
 
 
