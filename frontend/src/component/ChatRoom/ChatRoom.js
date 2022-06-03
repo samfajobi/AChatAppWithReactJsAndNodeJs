@@ -8,12 +8,9 @@ import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
 const Container = styled.div`
   width: 80%;
   position: absolute;
-  top: 8%;
+  top: 6%;
   left: 10%;
   
- 
-  
- 
 `
 const Header = styled.div`
   background-color: #08DCE5;
@@ -26,7 +23,10 @@ const HeaderInfo = styled.div`
   display: flex;
 `
 
-const HeaderIcon = styled.div``
+const HeaderIcon = styled.div`
+  margin-top: 30px;
+  margin-right: 15px;
+`
 
 
 const HeaderTitle = styled.h4`
@@ -157,8 +157,13 @@ const Button = styled.button`
 
 const SendMessage = styled.div`
   margin-left: 20px;
-  margin-top: 35%;
+  margin-top: 38%;
   display: flex;
+
+  @media screen and (max-width: 1440px) and (min-width: 900px){
+    margin-top: 40%;
+
+  }
  
 `
 
