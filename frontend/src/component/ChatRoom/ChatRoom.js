@@ -43,6 +43,8 @@ const MsgContainer = styled.div`
   height: 470px;
   padding: 20px;
   display: flex;
+
+  
 `
 
 const Messages = styled.div`
@@ -50,6 +52,10 @@ const Messages = styled.div`
   width: 70%;
   margin-left: 30px;
   border-radius: 20px;
+
+  @media screen and (max-width: 580px) {
+    width: 85%;
+  }
  
 `
 
@@ -58,6 +64,10 @@ const UserContainer = styled.div`
    width: 250px;
    border-radius: 20px;
    padding: 10px;
+
+   @media screen and (max-width: 580px) {
+     display: none;
+   }
   
 `
 
@@ -105,6 +115,12 @@ const IncMessage = styled.div`
   margin: 10px 0px 0px 20px;
   padding: 10px 10px;
   border-radius: 0px 40px;
+
+  @media screen and (max-width: 580px) {
+    width: 25%;
+    padding: 10px 20px;
+  }
+
 `
 
 const OutMessage = styled.div`
@@ -117,6 +133,11 @@ margin-right: 20px;
 padding: 10px 10px;
 border-radius: 0px 40px;
 
+@media screen and (max-width: 580px) {
+  width: 25%;
+  padding: 10px 20px;
+}
+
 `
 const MP = styled.div`
   padding-bottom: 10px;
@@ -126,6 +147,10 @@ const TP = styled.div`
   margin-left: 40px;
   margin-top: 20px;
   font-size: 13px;
+
+  @media screen and (max-width: 580px) {
+    margin-left: 20px;
+  }
 `
 
 
@@ -139,6 +164,10 @@ const Input = styled.input`
   margin-bottom: 10px;
   border: none;
   border-radius: 30%;
+
+  @media screen and (max-width: 580px) {
+    
+  }
 `
 
 const Button = styled.button`
@@ -152,6 +181,13 @@ const Button = styled.button`
   &:hover {
     background-color: #08DCE5;
   }
+
+  @media screen and (max-width: 580px) {
+    padding: 0px 10px
+    margin-left: 10px;
+    margin-right: 10px;
+    
+  }
   
 `
 
@@ -164,6 +200,14 @@ const SendMessage = styled.div`
     margin-top: 40%;
 
   }
+
+  @media screen and (max-width: 580px) {
+    margin-top: 84%;
+    margin-left: 10px;
+
+  }
+
+
  
 `
 
