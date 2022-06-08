@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import classes from './ChatRoom.module.css'
 import styled from 'styled-components';
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+import DehazeIcon from '@material-ui/icons/Dehaze';
 
 
 const Container = styled.div`
@@ -26,6 +27,18 @@ const HeaderInfo = styled.div`
 const HeaderIcon = styled.div`
   margin-top: 30px;
   margin-right: 15px;
+`
+
+const ToggleIcon = styled.div`
+
+
+@media screen and  (max-width: 580px) {
+  font-size: 20px;
+  margin-top: 29px;
+  margin-left: 67%; 
+ 
+}
+  
 `
 
 
@@ -252,6 +265,7 @@ const ChatRoom = ({socket, username, roomId }) => {
              <HeaderInfo>
                 <HeaderIcon><ChatOutlinedIcon/></HeaderIcon>
                 <HeaderTitle>HOC</HeaderTitle>
+                <ToggleIcon><DehazeIcon /></ToggleIcon>
              </HeaderInfo>
             </Header>
             {/* { messageList.map( (messageContent) => {
