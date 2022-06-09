@@ -35,7 +35,7 @@ mongoose.connect(process.env.DATABASE_URL)
 
 
 app.get("/api/auth", (req, res) => {
-    res.send("welcome")
+    res.send("Welcome to My Chat-Application")
 })
 
 
@@ -90,16 +90,16 @@ io.on('connection', (socket) => {
 
 // Serve static file if in  Production 
 
-if ( process.env.NODE_ENV === "production") {
-    // Set Static Folder
-   // app.use(express.static(path.join(""))) OR
-    app.use(express.static(path.join(__dirname, "/frontend/build")))
+// if ( process.env.NODE_ENV === "production") {
+//     // Set Static Folder
+//    // app.use(express.static(path.join(""))) OR
+//     app.use(express.static(path.join(__dirname, "/frontend/build")))
 
-    app.use("*", (req, res) => {
-        req.sendFile(path.join(__dirname, "/frontEnd/build", "index.html" ))
+//     app.use("*", (req, res) => {
+//         req.sendFile(path.join(__dirname, "/frontEnd/build", "index.html" ))
 
-    })
-}
+//     })
+// }
   
 
 server.listen(process.env.PORT || 5000, () => {
