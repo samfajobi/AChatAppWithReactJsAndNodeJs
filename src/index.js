@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const authRouter = require("../routes/auth") 
 //const socketio = require('socket.io') OR 
 const { Server } = require('socket.io');
-const path = require("path");
+//const path = require("path");
 
 
 
@@ -68,6 +68,7 @@ io.on('connection', (socket) => {
         console.log(`User with Id ${socket.id} joined room ${dataId}`)
     })
 
+
     socket.on('sendMessage', (msgData) => {
         socket.to(msgData.ChatRoom).emit( 'sendToClient', msgData)
         console.log(msgData) 
@@ -88,18 +89,7 @@ io.on('connection', (socket) => {
 
  
 
-// Serve static file if in  Production 
 
-// if ( process.env.NODE_ENV === "production") {
-//     // Set Static Folder
-//    // app.use(express.static(path.join(""))) OR
-//     app.use(express.static(path.join(__dirname, "/frontend/build")))
-
-//     app.use("*", (req, res) => {
-//         req.sendFile(path.join(__dirname, "/frontEnd/build", "index.html" ))
-
-//     })
-// }
   
 
 server.listen(process.env.PORT || 5000, () => {

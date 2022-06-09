@@ -4,12 +4,11 @@
   "description": "ChatAppWithSocket.IO",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "dev": "nodemon src/index.js",
-    "client": "npm start --prefix frontend",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "start": "node src/index.js"
+   
+   
   },
-  "author": "Sam_Codes",
+  "author": "Sam_Codes",  
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
