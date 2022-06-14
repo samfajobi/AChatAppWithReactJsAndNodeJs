@@ -70,7 +70,7 @@ io.on('connection', (socket) => {
 
 
     socket.on('sendMessage', (msgData) => {
-        socket.to(msgData.ChatRoom).emit( 'sendToClient', msgData)
+        socket.to(msgData.ChatRoom).emit('sendToClient', msgData)
         console.log(msgData) 
     })
 
